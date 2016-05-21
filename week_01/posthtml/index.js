@@ -16,9 +16,7 @@ const ifOne = (tmp,node,elClass) =>{
 
 const plugin = inHtml =>
     inHtml
-        .match({ attrs: true}, node =>{
-
-        if(node.attrs.class){
+        .match({ attrs: { class: true }}, node =>{
             let tmp = node.attrs.class.split(' ');
             tmp.forEach( elClass => {
                 if(bootstrapClsses.indexOf(elClass) != -1){
@@ -30,7 +28,6 @@ const plugin = inHtml =>
                     }
                 }
             })
-        }
 
         return node
 
