@@ -1,8 +1,7 @@
 const PostHTML = require('posthtml');
-fs = require('fs');
+const fs = require('fs');
 const html = fs.readFileSync('index.html','utf-8');
-let text = fs.readFileSync('bootstrapClasses','utf8').replace(/\n/g,'').split('.');
-let bootstrapClsses = text.slice(1);
+const bootstrapClsses = fs.readFileSync('bootstrapClasses','utf8').replace(/\n/g,'').split('.').slice(1);
 
 const pat = /js-/;
 
