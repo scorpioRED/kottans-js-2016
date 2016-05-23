@@ -1,12 +1,15 @@
 {
-  "name": "posthtml",
+  "name": "posthtml_plugin",
   "version": "1.0.0",
   "description": "homework_w01_l02",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "scorpiored",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "posthtml": "^0.8.7"
+  }
 }
